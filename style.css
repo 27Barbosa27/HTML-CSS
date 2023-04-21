@@ -10,7 +10,7 @@ body, h1, h2, h3, p, ul, li {
   }
   
   header {
-    background-color: #333;
+    
     color: #fff;
     padding: 20px;
   }
@@ -56,7 +56,7 @@ body{
   overflow: hidden;
   height: 400px;
   width: 1200px;
-  margin-left: 360px;
+  margin-left: 100px ;
   margin-top: 20px;
   
 
@@ -104,6 +104,7 @@ body{
     animation-direction: alternate;
     -webkit-animation-play-state: running;
     animation-play-state: running;
+    
 }
 
 .img-container{
@@ -124,10 +125,13 @@ body{
 
 .myCard {
   background-color: transparent;
-  width: 190px;
+  width: 300px;
   height: 254px;
-  perspective: 1000px;
-  margin-left: 1000px;
+  perspective: 500px;
+  margin-left: 100px;
+  margin-bottom: 5%;
+  
+  
 }
 
 .title {
@@ -139,7 +143,7 @@ body{
 
 .innerCard {
   position: relative;
-  width: 100%;
+  width: 300%;
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
@@ -162,21 +166,21 @@ body{
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid orange;
   border-radius: 1rem;
   color: white;
-  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0.3em orange;
   font-weight: 700;
 }
 
 .frontSide,
 .frontSide::before {
-  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+  background: linear-gradient(43deg, rgb(2, 1, 2)27%, orange 78%, rgb(255, 204, 112) 100%);
 }
 
 .backSide,
 .backSide::before {
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-image: linear-gradient(160deg, orange 0%, orange 100%);
 }
 
 .backSide {
@@ -187,16 +191,79 @@ body{
 .backSide::before {
   top: 50%;
   left: 50%;
+  bottom: 50%;
   transform: translate(-50%, -50%);
   content: '';
   width: 110%;
   height: 110%;
   position: absolute;
+  display: flex;
   z-index: -1;
   border-radius: 1em;
   filter: blur(20px);
 }
-   
+
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+ 
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 20%;
+
+  /* Center and scale the image nicely */
   
-  
-  
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: black;
+  font-weight: bold;
+  border: 3px solid black;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.icon{
+  text-decoration: none;
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px #1634ad, -5px -5px 10px #1e6ce9  ;
+
+}
+.icon :hover{
+  color: rgb(247,239,3);
+  box-shadow: inset 5px 5px 10px #1634ad, inset -5px -5px 10px #1e6ce9;
+}
+.container{
+  display: flex;
+  justify-content: justify;
+}
