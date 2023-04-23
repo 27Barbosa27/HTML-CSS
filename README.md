@@ -1,2 +1,2 @@
 # HTML-CSS
-Site for my school
+Site for my programation classes
